@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bright Stays — Enriching Childhood, One Stay at a Time</title>
   <link rel="stylesheet" href="style.css?v=3"/>
+  <style>
+    /* Critical inline overrides — ensures layout works even if CDN serves stale CSS */
+    nav { position:fixed;top:0;left:0;right:0;z-index:200;padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;background:transparent; }
+    nav.scrolled { background:rgba(255,255,255,0.96);box-shadow:0 1px 0 rgba(0,0,0,0.06); }
+    .nav-logo { display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.18rem;text-decoration:none; }
+    .nav-logo svg { width:38px!important;height:38px!important;flex-shrink:0; }
+    .nav-links { display:flex;align-items:center;gap:36px; }
+    .nav-links a { font-size:.88rem;font-weight:600;text-decoration:none;color:rgba(255,255,255,.75); }
+    .nav-cta { background:#E76F51!important;color:#fff!important;padding:9px 22px;border-radius:8px; }
+    .hero { min-height:100vh;background:#0A1628;display:flex;align-items:center;padding:120px 6% 80px;position:relative;overflow:hidden; }
+    .hero-inner { max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center; }
+    .hero h1 { font-size:clamp(2.8rem,5.5vw,4.4rem);font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.03em;margin-bottom:24px; }
+    .hero h1 em { font-style:normal;color:#E76F51; }
+    .hero-sub { font-size:1.1rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:520px;margin-bottom:44px; }
+    .hero-btns { display:flex;gap:14px;flex-wrap:wrap; }
+    .hero-tag { display:inline-flex;align-items:center;gap:8px;background:rgba(42,157,143,.18);border:1px solid rgba(42,157,143,.3);color:#7DD8D1;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:28px; }
+    .hero-visual { display:flex;align-items:center;justify-content:center; }
+    .hero-icon-wrap { position:relative;width:340px;height:340px; }
+    .hero-icon-main { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:160px!important;height:160px!important; }
+    .word-bright { color:#fff; }
+    .word-stays { color:#2A9D8F; }
+  </style>
 </head>
 <body>
 
