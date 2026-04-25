@@ -1,175 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bright Stays — Enriching Childhood, One Stay at a Time</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- ── Nav ──────────────────────────────────────────────────── -->
-<nav>
+<!-- ── Navigation ──────────────────────────────────────────────── -->
+<nav class="transparent" id="nav">
   <a href="index.html" class="nav-logo">
-    <div class="nav-icon">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#2A9D8F"/>
-        <path d="M20 7L22.5 16.5L32 19L22.5 21.5L20 31L17.5 21.5L8 19L17.5 16.5Z" fill="white"/>
-        <circle cx="28" cy="10" r="4" fill="#E76F51"/>
-      </svg>
-    </div>
-    Bright <span class="stays">&nbsp;Stays</span>
+    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#2A9D8F"/>
+      <path d="M50,20 L57,41 L78,50 L57,59 L50,80 L43,59 L22,50 L43,41 Z" fill="white"/>
+      <circle cx="73" cy="23" r="13" fill="#E76F51"/>
+    </svg>
+    <span><span class="word-bright">Bright</span> <span class="word-stays">Stays</span></span>
   </a>
   <div class="nav-links">
     <a href="index.html" class="active">Home</a>
     <a href="problem.html">The Problem</a>
-    <a href="programs.html">Our Programs</a>
+    <a href="programs.html">Programs</a>
     <a href="involved.html" class="nav-cta">Get Involved</a>
   </div>
 </nav>
 
-<!-- ── Hero ─────────────────────────────────────────────────── -->
+<!-- ── Hero ────────────────────────────────────────────────────── -->
 <section class="hero">
-  <div class="hero-eyebrow">A nonprofit for pediatric patients</div>
-  <h1>Enriching childhood,<br><em>one stay at a time</em></h1>
-  <p>Children in long-term hospital stays deserve more than medical care. Bright Stays brings consistent enrichment, companionship, and academic support so they can keep growing — even in the hardest moments.</p>
-  <div class="hero-buttons">
-    <a href="programs.html" class="btn btn-primary">See Our Programs</a>
-    <a href="involved.html" class="btn btn-outline">Get Involved</a>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">Pediatric Hospital Enrichment</div>
+      <h1>When they can't leave,<br/>we <em>bring the world</em><br/>to them.</h1>
+      <p class="hero-sub">Bright Stays delivers consistent volunteer enrichment, companionship, and academic support to children during long-term pediatric hospital stays — so illness never steals childhood.</p>
+      <div class="hero-btns">
+        <a href="involved.html" class="btn btn-coral">Get Involved →</a>
+        <a href="problem.html" class="btn btn-ghost">See the Need</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-icon-wrap">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <svg class="hero-icon-main" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#2A9D8F"/>
+          <path d="M50,20 L57,41 L78,50 L57,59 L50,80 L43,59 L22,50 L43,41 Z" fill="white"/>
+          <circle cx="73" cy="23" r="13" fill="#E76F51"/>
+        </svg>
+        <div class="orbit-dot orbit-dot-1"></div>
+        <div class="orbit-dot orbit-dot-2"></div>
+        <div class="orbit-dot orbit-dot-3"></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ── Stats bar ─────────────────────────────────────────────── -->
-<div class="stats-bar">
-  <div class="stat">
-    <div class="stat-num">3M+</div>
-    <div class="stat-label">children hospitalized<br>in the US each year</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">Weeks</div>
-    <div class="stat-label">to months away<br>from school & friends</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">0</div>
-    <div class="stat-label">programs providing consistent<br>volunteer companionship at scale</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">4</div>
-    <div class="stat-label">programs Bright Stays<br>will launch at pilot</div>
+<!-- ── Stats ────────────────────────────────────────────────────── -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-num">5.8M</span>
+      <span class="stat-label">Children hospitalized<br/>in the U.S. each year</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <span class="stat-num">30+</span>
+      <span class="stat-label">Days some children<br/>spend in a single stay</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <span class="stat-num">3×</span>
+      <span class="stat-label">Higher risk of anxiety<br/>in long-term patients</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Consistent enrichment<br/>programs at most hospitals</span>
+    </div>
   </div>
 </div>
 
-<!-- ── Mission strip ──────────────────────────────────────────── -->
-<div class="mission-strip">
-  <p>"Bright Stays brings consistent enrichment, companionship, and academic support to children during long-term hospital stays — so they can continue to <em>grow, learn, and feel like kids</em>, even in the hardest moments."</p>
+<!-- ── Mission quote ─────────────────────────────────────────────── -->
+<div class="mission-section">
+  <p class="mission-quote reveal">
+    <em>"A hospital stay shouldn't mean a childhood lost."</em><br/>
+    <strong>Bright Stays exists to make sure it doesn't.</strong>
+  </p>
 </div>
 
-<!-- ── The problem preview ────────────────────────────────────── -->
-<section style="background: #fff; padding: 80px 5%;">
-  <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
-    <div>
-      <div class="section-label">The Problem</div>
-      <h2 class="section-title">Children are disappearing from childhood</h2>
-      <p style="color:var(--gray); font-size:1rem; line-height:1.75; margin-bottom:20px;">
-        When a child is admitted to a hospital for weeks or months, they don't just face a medical battle. They fall behind in school, lose touch with friends, and spend long stretches of time bored, isolated, and afraid — with very little to distract or comfort them between procedures.
-      </p>
-      <p style="color:var(--gray); font-size:1rem; line-height:1.75; margin-bottom:32px;">
-        Hospital Child Life specialists do incredible work, but demand far outpaces available staff. That gap is where Bright Stays lives.
-      </p>
-      <a href="problem.html" class="btn btn-teal">Read More</a>
+<!-- ── What we do ─────────────────────────────────────────────────── -->
+<section class="section" style="background: var(--gray-light);">
+  <div class="section-inner">
+    <div class="text-center mb-40">
+      <span class="label">What We Do</span>
+      <h2 class="section-title reveal">Three pillars.<br/>One mission.</h2>
+      <p class="section-sub reveal" style="margin: 0 auto;">Every Bright Stays program is designed around what hospitalized children actually need — connection, learning, and joy.</p>
     </div>
-    <div style="display:flex; flex-direction:column; gap:14px;">
-      <div style="background:var(--coral-light); border-left:3px solid var(--coral); padding:18px 20px; border-radius:8px;">
-        <strong style="color:var(--dark); font-size:0.95rem; display:block; margin-bottom:4px;">Falling behind in school</strong>
-        <span style="color:var(--gray); font-size:0.9rem;">Weeks of missed classes create gaps that are hard to close after discharge.</span>
+    <div class="cards-grid-3">
+      <div class="card card-accent-top reveal">
+        <span class="card-icon">🎨</span>
+        <h3>Creative Enrichment</h3>
+        <p>Art, music, storytelling, and play — delivered bedside by trained volunteers. Because creativity heals as much as medicine.</p>
       </div>
-      <div style="background:var(--coral-light); border-left:3px solid var(--coral); padding:18px 20px; border-radius:8px;">
-        <strong style="color:var(--dark); font-size:0.95rem; display:block; margin-bottom:4px;">Social isolation</strong>
-        <span style="color:var(--gray); font-size:0.9rem;">Separation from peers during critical developmental years causes lasting harm.</span>
+      <div class="card card-accent-top reveal reveal-delay-1">
+        <span class="card-icon">📚</span>
+        <h3>Academic Continuity</h3>
+        <p>Tutoring, reading, and schoolwork support so children don't fall behind and return home with their confidence intact.</p>
       </div>
-      <div style="background:var(--coral-light); border-left:3px solid var(--coral); padding:18px 20px; border-radius:8px;">
-        <strong style="color:var(--dark); font-size:0.95rem; display:block; margin-bottom:4px;">Anxiety & boredom</strong>
-        <span style="color:var(--gray); font-size:0.9rem;">Long stretches between procedures with nothing to do amplify fear and stress.</span>
+      <div class="card card-accent-top reveal reveal-delay-2">
+        <span class="card-icon">🤝</span>
+        <h3>Genuine Companionship</h3>
+        <p>Consistent, friendly faces — not just one-time visitors. Relationships that make long stays feel less isolating, week after week.</p>
       </div>
-      <div style="background:var(--coral-light); border-left:3px solid var(--coral); padding:18px 20px; border-radius:8px;">
-        <strong style="color:var(--dark); font-size:0.95rem; display:block; margin-bottom:4px;">Overwhelmed families</strong>
-        <span style="color:var(--gray); font-size:0.9rem;">Parents are exhausted and stretched too thin to fill the enrichment gap alone.</span>
+    </div>
+    <div class="text-center mt-40">
+      <a href="programs.html" class="btn btn-teal">Explore All Programs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Why it matters ──────────────────────────────────────────── -->
+<section class="section" style="background: var(--navy);">
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <span class="label label-white">The Gap</span>
+        <h2 class="section-title text-white reveal" style="margin-bottom: 20px;">Most hospitals treat the body.<br/>Few nurture the <em style="color: var(--coral); font-style: normal;">whole child</em>.</h2>
+        <p style="color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 32px;" class="reveal">Long-term pediatric patients face emotional isolation, developmental regression, and academic setbacks that medicine alone can't fix. Today, there's no organization providing <em>consistent</em>, <em>recurring</em> enrichment at the bedside — across all three dimensions at once.</p>
+        <a href="problem.html" class="btn btn-outline-teal reveal">Read the Full Problem →</a>
+      </div>
+      <div class="reveal">
+        <div class="callout">
+          <h4>The Bright Stays Difference</h4>
+          <p style="margin-bottom: 20px;">We don't show up once. We come back, week after week, building real relationships with the children and families who need us most.</p>
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
+              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Recurring, scheduled visits — not one-time events</span>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
+              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Trained volunteers matched to each child's interests</span>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
+              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Creative + academic + emotional support in one program</span>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
+              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Hospital-embedded, fully coordinated with care teams</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── Programs preview ───────────────────────────────────────── -->
-<section style="background:var(--gray-light); padding:80px 5%;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div class="section-center">
-      <div class="section-label">Our Programs</div>
-      <h2 class="section-title">Four ways we show up</h2>
-      <p class="section-subtitle">Every program is designed to complement — not replace — the work of hospital Child Life departments.</p>
+<!-- ── Who we serve ─────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="text-center mb-40">
+      <span class="label">Our Reach</span>
+      <h2 class="section-title reveal">Starting in Boston.<br/>Growing to New York.</h2>
+      <p class="section-sub reveal" style="margin: 0 auto;">Bright Stays is piloting at Boston Children's Hospital, with Summer 2025 expansion into NYU Langone, Columbia, and NewYork-Presbyterian.</p>
     </div>
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-icon">🤝</div>
-        <h3>Volunteer Visits</h3>
-        <p>Trained college volunteers provide consistent, recurring visits — games, art, reading, and real human connection.</p>
+    <div class="cards-grid-2">
+      <div class="card card-accent-coral reveal">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+          <span style="font-size: 2rem;">🏥</span>
+          <div>
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); margin-bottom: 4px;">Pilot Site</div>
+            <h3 style="margin: 0;">Boston Children's Hospital</h3>
+          </div>
+        </div>
+        <p>The #1 ranked children's hospital in the U.S. Our pilot program will serve long-term inpatient children across oncology, cardiology, and chronic care wards.</p>
       </div>
-      <div class="card">
-        <div class="card-icon">🎨</div>
-        <h3>Activity Kits</h3>
-        <p>Hospital-safe boxes of crafts, puzzles, and books, curated by age and delivered to long-term patients.</p>
+      <div class="card card-accent-top reveal reveal-delay-1">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+          <span style="font-size: 2rem;">🌆</span>
+          <div>
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px;">Summer Expansion</div>
+            <h3 style="margin: 0;">New York City</h3>
+          </div>
+        </div>
+        <p>Scaling to NYU Langone, Columbia University Medical Center, and NewYork-Presbyterian — bringing Bright Stays to thousands more children and families.</p>
       </div>
-      <div class="card">
-        <div class="card-icon">📚</div>
-        <h3>Academic Tutoring</h3>
-        <p>Volunteer tutors help kids keep pace with schoolwork so they return to class ready — not months behind.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">💻</div>
-        <h3>Virtual Programming</h3>
-        <p>Zoom-based activities for immunocompromised patients: storytelling, art classes, and one-on-one hangouts.</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="programs.html" class="btn btn-teal">Explore Our Programs</a>
     </div>
   </div>
 </section>
 
-<!-- ── Founded at Babson ───────────────────────────────────────── -->
-<section style="background:var(--white); padding:72px 5%;">
-  <div style="max-width:800px; margin:0 auto; text-align:center;">
-    <div class="section-label">About Bright Stays</div>
-    <h2 class="section-title">Built by a student who believes kids shouldn't have to put childhood on hold</h2>
-    <p style="color:var(--gray); font-size:1rem; line-height:1.75; margin-bottom:32px;">
-      Bright Stays was founded by Gabriella Galli Dias, a student at Babson College in Boston with a deep interest in healthcare and community service. Frustrated that no existing organization was providing consistent human enrichment for long-term pediatric patients, she set out to build one — grounded in rigorous operations, genuine care, and the entrepreneurial values of Babson.
-    </p>
-    <p style="color:var(--gray); font-size:1rem; line-height:1.75; margin-bottom:36px;">
-      We are currently in our founding phase, actively partnering with Boston Children's Hospital and building our pilot program for launch in 2026.
-    </p>
-    <a href="involved.html" class="btn btn-coral">Join the Founding Team</a>
+<!-- ── Get involved CTA ─────────────────────────────────────────── -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <span class="label label-white mb-16" style="display: inline-block;">Join Us</span>
+    <h2>Ready to make a difference?</h2>
+    <p>Whether you're a volunteer, a hospital administrator, a student organization, or a donor — there's a role for you at Bright Stays.</p>
+    <div class="flex flex-wrap gap-14" style="justify-content: center;">
+      <a href="involved.html" class="btn btn-coral">Get Involved Today</a>
+      <a href="programs.html" class="btn btn-ghost">Our Programs</a>
+    </div>
   </div>
-</section>
+</div>
 
-<!-- ── Footer ─────────────────────────────────────────────────── -->
+<!-- ── Footer ───────────────────────────────────────────────────── -->
 <footer>
-  <div class="footer-logo">
-    <div class="nav-icon">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#2A9D8F"/>
-        <path d="M20 7L22.5 16.5L32 19L22.5 21.5L20 31L17.5 21.5L8 19L17.5 16.5Z" fill="white"/>
-        <circle cx="28" cy="10" r="4" fill="#E76F51"/>
-      </svg>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Bright Stays</h3>
+      <p>Enriching childhood, one stay at a time. Providing enrichment, companionship, and academic support to pediatric long-term inpatients.</p>
     </div>
-    <span>Bright <span class="stays">Stays</span></span>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="problem.html">The Problem</a>
+      <a href="programs.html">Programs</a>
+      <a href="involved.html">Get Involved</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="programs.html">Creative Enrichment</a>
+      <a href="programs.html">Academic Support</a>
+      <a href="programs.html">Companionship</a>
+      <a href="programs.html">Volunteer Training</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
+      <a href="involved.html">Send a Message</a>
+      <a href="involved.html">Partner With Us</a>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="problem.html">The Problem</a>
-    <a href="programs.html">Programs</a>
-    <a href="involved.html">Get Involved</a>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Bright Stays. All rights reserved.</span>
+    <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
   </div>
-  <div class="footer-copy">© 2026 Bright Stays</div>
 </footer>
 
+<script>
+  // Nav transparency on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.classList.remove('transparent');
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+      nav.classList.add('transparent');
+    }
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

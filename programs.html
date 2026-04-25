@@ -1,228 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Programs — Bright Stays</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<nav>
+<!-- ── Navigation ──────────────────────────────────────────────── -->
+<nav class="white" id="nav">
   <a href="index.html" class="nav-logo">
-    <div class="nav-icon">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#2A9D8F"/>
-        <path d="M20 7L22.5 16.5L32 19L22.5 21.5L20 31L17.5 21.5L8 19L17.5 16.5Z" fill="white"/>
-        <circle cx="28" cy="10" r="4" fill="#E76F51"/>
-      </svg>
-    </div>
-    Bright <span class="stays">&nbsp;Stays</span>
+    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#2A9D8F"/>
+      <path d="M50,20 L57,41 L78,50 L57,59 L50,80 L43,59 L22,50 L43,41 Z" fill="white"/>
+      <circle cx="73" cy="23" r="13" fill="#E76F51"/>
+    </svg>
+    <span><span class="word-bright">Bright</span> <span class="word-stays">Stays</span></span>
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="problem.html">The Problem</a>
-    <a href="programs.html" class="active">Our Programs</a>
+    <a href="programs.html" class="active">Programs</a>
     <a href="involved.html" class="nav-cta">Get Involved</a>
   </div>
 </nav>
 
-<!-- ── Page Hero ─────────────────────────────────────────────── -->
+<!-- ── Page Hero ─────────────────────────────────────────────────── -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="eyebrow">What We Do</div>
-    <h1>Four programs. One mission.</h1>
-    <p>Every Bright Stays program is designed to complement the work of hospital Child Life departments — not replace it. We fill the gaps that exist between medical care and the rest of childhood.</p>
+    <span class="page-eyebrow">Our Programs</span>
+    <h1>Three programs.<br/>One whole child.</h1>
+    <p>Every Bright Stays visit combines creative enrichment, academic support, and genuine companionship — tailored to each child's age, interests, and current needs.</p>
   </div>
 </div>
 
-<!-- ── Programs ──────────────────────────────────────────────── -->
-<section style="padding:80px 5%;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div class="section-center" style="margin-bottom:0;">
-      <div class="section-label">Our Programs</div>
-      <h2 class="section-title">Built around what kids actually need</h2>
-      <p class="section-subtitle">Each program targets a specific gap that long-term pediatric patients face. Together, they provide something no other organization offers at scale: a full picture of consistent, human-centered support.</p>
-    </div>
-
-    <div class="programs-grid">
-
-      <div class="program-card">
-        <div class="program-card-top">
-          <div class="prog-icon">🤝</div>
-          <h3>Volunteer Visits</h3>
+<!-- ── Program cards ─────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="cards-grid-3">
+      <!-- Program 1 -->
+      <div class="prog-card reveal">
+        <div class="prog-card-head" style="background: linear-gradient(135deg, #2A9D8F 0%, #1f7a6e 100%);">
+          <div class="prog-num">Program 01</div>
+          <span class="prog-icon-lg">🎨</span>
+          <h3>Creative Enrichment</h3>
         </div>
-        <div class="program-card-body">
-          <p>Trained, vetted college volunteers visit long-term patients on a regular, recurring schedule. These aren't one-time drop-ins — they're real relationships. Kids get to know their volunteers, look forward to visits, and experience genuine human connection during one of the hardest stretches of their lives.</p>
-          <ul class="program-details">
-            <li>Weekly or bi-weekly scheduled visits per patient</li>
-            <li>Activities: games, art, reading, conversation, creative projects</li>
-            <li>Volunteers matched to patients by age and interests</li>
-            <li>Full background checks and Child Life orientation required</li>
-            <li>Supervised and coordinated with hospital staff</li>
+        <div class="prog-card-body">
+          <p>Art, music, storytelling, and hands-on play delivered bedside by trained volunteers. Every session is age-appropriate, interest-guided, and designed to spark joy — regardless of mobility or energy levels.</p>
+          <ul class="prog-details">
+            <li>Drawing, painting, and collage activities</li>
+            <li>Storytelling and imaginative play sessions</li>
+            <li>Simple instrument exploration and music listening</li>
+            <li>Holiday and seasonal themed projects</li>
+            <li>Take-home keepsakes and artwork</li>
           </ul>
         </div>
       </div>
 
-      <div class="program-card">
-        <div class="program-card-top" style="background:var(--coral);">
-          <div class="prog-icon">🎨</div>
-          <h3>Activity Kits</h3>
+      <!-- Program 2 -->
+      <div class="prog-card reveal reveal-delay-1">
+        <div class="prog-card-head" style="background: linear-gradient(135deg, #E76F51 0%, #c95e3f 100%);">
+          <div class="prog-num">Program 02</div>
+          <span class="prog-icon-lg">📚</span>
+          <h3>Academic Continuity</h3>
         </div>
-        <div class="program-card-body">
-          <p>Curated, hospital-safe boxes of crafts, puzzles, books, and games delivered directly to long-term patients. Each kit is thoughtfully assembled for the patient's age and interests — giving them something to do between visits and procedures, and something that feels chosen just for them.</p>
-          <ul class="program-details">
-            <li>All materials hospital-safe (no latex, no small parts for younger kids)</li>
-            <li>Personalized by age group: 4–7, 8–12, 13–17</li>
-            <li>Refreshed monthly for patients with extended stays</li>
-            <li>Funded by donations and corporate sponsors</li>
-            <li>Scalable and easily distributable across hospital units</li>
+        <div class="prog-card-body">
+          <p>One-on-one tutoring, reading support, and homework help so children can keep up with their grade level and return to school without a gap in confidence or knowledge.</p>
+          <ul class="prog-details">
+            <li>Personalized tutoring across core subjects</li>
+            <li>Coordination with the child's home school when possible</li>
+            <li>Reading aloud and literacy exercises</li>
+            <li>Grade-appropriate workbooks and activities</li>
+            <li>STEM exploration through puzzles and games</li>
           </ul>
         </div>
       </div>
 
-      <div class="program-card">
-        <div class="program-card-top" style="background:#264653;">
-          <div class="prog-icon">📚</div>
-          <h3>Academic Tutoring</h3>
+      <!-- Program 3 -->
+      <div class="prog-card reveal reveal-delay-2">
+        <div class="prog-card-head" style="background: linear-gradient(135deg, #264653 0%, #0A1628 100%);">
+          <div class="prog-num">Program 03</div>
+          <span class="prog-icon-lg">🤝</span>
+          <h3>Companionship &amp; Connection</h3>
         </div>
-        <div class="program-card-body">
-          <p>One of the most overlooked consequences of long hospital stays is academic regression. Kids miss weeks or months of school and often return far behind their classmates. Our tutoring program pairs patients with trained academic volunteers who help them stay on track — so coming home doesn't mean starting over.</p>
-          <ul class="program-details">
-            <li>Volunteer tutors from local colleges (education, STEM majors prioritized)</li>
-            <li>Coordination with patients' schools when possible</li>
-            <li>Core subjects: math, reading, writing, science</li>
-            <li>Adaptive to patient energy levels and medical schedules</li>
-            <li>Available in person or via video call</li>
+        <div class="prog-card-body">
+          <p>Consistent volunteer friendships that make long stays feel less lonely. The same volunteers return week after week — building trust, familiarity, and a genuine bond that children look forward to.</p>
+          <ul class="prog-details">
+            <li>Recurring weekly visits from assigned volunteers</li>
+            <li>Board games, card games, and interactive play</li>
+            <li>Casual conversation and active listening</li>
+            <li>Support for siblings and family members present</li>
+            <li>Cultural and interest-based matching</li>
           </ul>
         </div>
       </div>
-
-      <div class="program-card">
-        <div class="program-card-top" style="background:#457B9D;">
-          <div class="prog-icon">💻</div>
-          <h3>Virtual Programming</h3>
-        </div>
-        <div class="program-card-body">
-          <p>Many long-term pediatric patients are immunocompromised and cannot receive in-person visitors. Virtual programming ensures that no child is left out — bringing enrichment, creativity, and human connection directly to their bedside screen, wherever they are in the hospital.</p>
-          <ul class="program-details">
-            <li>Zoom-based one-on-one hangouts with trained volunteers</li>
-            <li>Live virtual art classes, storytelling sessions, and games</li>
-            <li>Available for all patients, regardless of immune status</li>
-            <li>Especially valuable for ICU and transplant unit patients</li>
-            <li>Flexible scheduling around treatment and rest windows</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── How it works ───────────────────────────────────────────── -->
-<div class="how-strip">
-  <div style="max-width:1000px; margin:0 auto; text-align:center;">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">From volunteer to patient — step by step</h2>
-  </div>
-  <div class="how-steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h4>Hospital Partnership</h4>
-      <p>We work directly with Child Life departments to understand patient needs, access protocols, and scheduling before any volunteer enters the hospital.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h4>Volunteer Training</h4>
-      <p>All volunteers complete background checks, hospital orientation, and Bright Stays training on age-appropriate engagement, boundaries, and patient sensitivity.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h4>Patient Matching</h4>
-      <p>Patients are matched to volunteers based on age, interests, and program type. Families opt in and can set preferences for their child's experience.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <h4>Regular Visits</h4>
-      <p>Volunteers show up on a consistent schedule. The same faces, week after week — building the kind of trust and routine that matters to kids in long stays.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">5</div>
-      <h4>Measure & Improve</h4>
-      <p>We collect feedback from families, patients, and Child Life staff to continuously improve our programs and document our impact for donors and partners.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ── Who we serve ───────────────────────────────────────────── -->
-<section style="padding:80px 5%; background:var(--white);">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+<!-- ── How a visit works ──────────────────────────────────────────── -->
+<section class="section" style="background: var(--gray-light);">
+  <div class="section-inner">
+    <div class="split">
       <div>
-        <div class="section-label">Who We Serve</div>
-        <h2 class="section-title">Pediatric patients ages 4–17</h2>
-        <p style="color:var(--gray); font-size:1rem; line-height:1.75; margin-bottom:20px;">
-          Bright Stays focuses on children admitted for extended stays of one week or more. Priority populations include:
-        </p>
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--teal); font-weight:700; font-size:1.1rem; flex-shrink:0;">→</span>
-            <span style="color:var(--gray); font-size:0.95rem;">Children undergoing cancer treatment (oncology)</span>
+        <span class="label">The Visit</span>
+        <h2 class="section-title reveal">How a Bright Stays<br/>visit actually works.</h2>
+        <p style="color: var(--gray); line-height: 1.75; margin-bottom: 32px;" class="reveal">Every visit is structured but flexible — designed to meet children where they are, on the day that they need it most.</p>
+        <div class="steps reveal">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Volunteer Arrival &amp; Check-In</h4>
+              <p>Volunteers check in with the nursing station to confirm the child is available and note any updated care instructions or activity restrictions.</p>
+            </div>
           </div>
-          <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--teal); font-weight:700; font-size:1.1rem; flex-shrink:0;">→</span>
-            <span style="color:var(--gray); font-size:0.95rem;">Patients awaiting or recovering from organ transplants</span>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Personalized Engagement</h4>
+              <p>Based on the child's interests and that day's energy, volunteers lead creative, academic, or social activities — or a blend of all three.</p>
+            </div>
           </div>
-          <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--teal); font-weight:700; font-size:1.1rem; flex-shrink:0;">→</span>
-            <span style="color:var(--gray); font-size:0.95rem;">Children with serious injuries requiring extended rehabilitation</span>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Family Time</h4>
+              <p>Caregivers and siblings can be included, and parents get a rare moment of relief knowing their child is in good hands.</p>
+            </div>
           </div>
-          <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--teal); font-weight:700; font-size:1.1rem; flex-shrink:0;">→</span>
-            <span style="color:var(--gray); font-size:0.95rem;">Kids managing complex cardiac conditions</span>
-          </div>
-          <div style="display:flex; gap:12px; align-items:flex-start;">
-            <span style="color:var(--teal); font-weight:700; font-size:1.1rem; flex-shrink:0;">→</span>
-            <span style="color:var(--gray); font-size:0.95rem;">Patients with rare diseases requiring prolonged inpatient care</span>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Visit Log &amp; Follow-Up</h4>
+              <p>Volunteers log activity notes, morale observations, and any flag for the care team — keeping hospital staff fully in the loop.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div style="background:var(--teal-light); border-radius:var(--radius); padding:36px; border-left:4px solid var(--teal);">
-        <div class="section-label" style="margin-bottom:12px;">Our Core Commitment</div>
-        <p style="color:var(--dark); font-size:1.05rem; font-weight:600; line-height:1.6; margin-bottom:16px;">We work alongside hospital staff — never around them.</p>
-        <p style="color:var(--gray); font-size:0.95rem; line-height:1.7; margin-bottom:16px;">Every Bright Stays program is designed and implemented in direct coordination with Child Life departments. We see ourselves as an extension of their team, not a separate entity.</p>
-        <p style="color:var(--gray); font-size:0.95rem; line-height:1.7;">Volunteer access, patient matching, scheduling, and activity guidelines are all subject to hospital approval and adapted to each unit's protocols.</p>
+      <div class="reveal">
+        <div class="callout" style="margin-bottom: 20px;">
+          <h4>📋 Every Volunteer Is Trained</h4>
+          <p>Before their first visit, all Bright Stays volunteers complete a formal onboarding covering child development, hospital etiquette, trauma-informed communication, and activity facilitation.</p>
+        </div>
+        <div class="callout">
+          <h4>🏥 Fully Hospital-Coordinated</h4>
+          <p>We work with hospital child life specialists and nursing teams to ensure every visit is safe, appropriate, and complementary to the child's medical care plan.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CTA ────────────────────────────────────────────────────── -->
-<section style="background:var(--dark); padding:72px 5%; text-align:center;">
-  <h2 style="color:var(--white); font-size:1.8rem; font-weight:800; margin-bottom:14px;">Want to help us launch these programs?</h2>
-  <p style="color:rgba(255,255,255,0.65); font-size:1rem; max-width:500px; margin:0 auto 36px; line-height:1.75;">We're building our founding volunteer team, board, and hospital partnerships right now. There's a role for you.</p>
-  <a href="involved.html" class="btn btn-coral">Get Involved</a>
+<!-- ── Who we serve ───────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="text-center mb-40">
+      <span class="label">Eligibility</span>
+      <h2 class="section-title reveal">Who we serve.</h2>
+      <p class="section-sub reveal" style="margin: 0 auto;">Bright Stays prioritizes children most likely to benefit — those who have been hospitalized long enough that normal childhood is genuinely at risk.</p>
+    </div>
+    <div class="cards-grid-4">
+      <div class="card card-accent-top reveal">
+        <span class="card-icon">⏱️</span>
+        <h3>Long-Term Patients</h3>
+        <p>Children with anticipated stays of 7+ days, including oncology, cardiology, and chronic condition patients.</p>
+      </div>
+      <div class="card card-accent-top reveal reveal-delay-1">
+        <span class="card-icon">📅</span>
+        <h3>Ages 4–17</h3>
+        <p>Programs are designed to scale with the child's developmental stage, from early learners to teenagers.</p>
+      </div>
+      <div class="card card-accent-top reveal reveal-delay-2">
+        <span class="card-icon">🌍</span>
+        <h3>All Backgrounds</h3>
+        <p>Multilingual volunteers and culturally sensitive programming ensure no child is left out due to language or background.</p>
+      </div>
+      <div class="card card-accent-top reveal reveal-delay-3">
+        <span class="card-icon">💛</span>
+        <h3>Free, Always</h3>
+        <p>Bright Stays is completely free for patients and families. Our funding comes from donors, grants, and partnerships.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <div class="footer-logo">
-    <div class="nav-icon">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#2A9D8F"/>
-        <path d="M20 7L22.5 16.5L32 19L22.5 21.5L20 31L17.5 21.5L8 19L17.5 16.5Z" fill="white"/>
-        <circle cx="28" cy="10" r="4" fill="#E76F51"/>
-      </svg>
+<!-- ── Roadmap ────────────────────────────────────────────────────── -->
+<section class="section" style="background: var(--navy);">
+  <div class="section-inner">
+    <div class="text-center mb-40">
+      <span class="label label-white">Our Roadmap</span>
+      <h2 class="section-title text-white reveal">Where we're going.</h2>
+      <p class="reveal" style="color: rgba(255,255,255,0.55); font-size: 1.05rem; line-height: 1.75; max-width: 560px; margin: 0 auto;">Bright Stays is building toward a national model — starting with one hospital and proving it works before scaling.</p>
     </div>
-    <span>Bright <span class="stays">Stays</span></span>
+    <div class="roadmap">
+      <div class="roadmap-card reveal">
+        <div class="roadmap-phase">Phase 1</div>
+        <div class="roadmap-time">Now → Summer 2025</div>
+        <h4>Pilot at Boston Children's</h4>
+        <div class="roadmap-item done"><span class="dot"></span>Hospital partnership outreach</div>
+        <div class="roadmap-item done"><span class="dot"></span>Volunteer onboarding framework</div>
+        <div class="roadmap-item active"><span class="dot"></span>Program curriculum design</div>
+        <div class="roadmap-item"><span class="dot"></span>First cohort of visits</div>
+        <div class="roadmap-item"><span class="dot"></span>Pilot impact measurement</div>
+      </div>
+      <div class="roadmap-card reveal reveal-delay-1">
+        <div class="roadmap-phase">Phase 2</div>
+        <div class="roadmap-time">Summer 2025</div>
+        <h4>NYC Expansion</h4>
+        <div class="roadmap-item"><span class="dot"></span>NYU Langone partnership</div>
+        <div class="roadmap-item"><span class="dot"></span>Columbia Medical Center</div>
+        <div class="roadmap-item"><span class="dot"></span>NewYork-Presbyterian</div>
+        <div class="roadmap-item"><span class="dot"></span>NYC volunteer recruitment</div>
+        <div class="roadmap-item"><span class="dot"></span>Cross-city coordination model</div>
+      </div>
+      <div class="roadmap-card reveal reveal-delay-2">
+        <div class="roadmap-phase">Phase 3</div>
+        <div class="roadmap-time">2026 and Beyond</div>
+        <h4>National Model</h4>
+        <div class="roadmap-item"><span class="dot"></span>Replication playbook published</div>
+        <div class="roadmap-item"><span class="dot"></span>University chapter network</div>
+        <div class="roadmap-item"><span class="dot"></span>Grant funding infrastructure</div>
+        <div class="roadmap-item"><span class="dot"></span>Impact reporting framework</div>
+        <div class="roadmap-item"><span class="dot"></span>10+ hospital partnerships</div>
+      </div>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="problem.html">The Problem</a>
-    <a href="programs.html">Programs</a>
-    <a href="involved.html">Get Involved</a>
+</section>
+
+<!-- ── CTA ────────────────────────────────────────────────────────── -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2>Want to be part of this?</h2>
+    <p>Volunteer, partner, or connect with us — every form of support helps us reach more children.</p>
+    <div class="flex flex-wrap gap-14" style="justify-content: center;">
+      <a href="involved.html" class="btn btn-coral">Get Involved →</a>
+      <a href="problem.html" class="btn btn-ghost">The Problem We're Solving</a>
+    </div>
   </div>
-  <div class="footer-copy">© 2026 Bright Stays</div>
+</div>
+
+<!-- ── Footer ───────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Bright Stays</h3>
+      <p>Enriching childhood, one stay at a time. Providing enrichment, companionship, and academic support to pediatric long-term inpatients.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="problem.html">The Problem</a>
+      <a href="programs.html">Programs</a>
+      <a href="involved.html">Get Involved</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="programs.html">Creative Enrichment</a>
+      <a href="programs.html">Academic Support</a>
+      <a href="programs.html">Companionship</a>
+      <a href="programs.html">Volunteer Training</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
+      <a href="involved.html">Send a Message</a>
+      <a href="involved.html">Partner With Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Bright Stays. All rights reserved.</span>
+    <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
+  </div>
 </footer>
 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

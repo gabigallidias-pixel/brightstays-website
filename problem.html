@@ -1,176 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Problem — Bright Stays</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<nav>
+<!-- ── Navigation ──────────────────────────────────────────────── -->
+<nav class="white" id="nav">
   <a href="index.html" class="nav-logo">
-    <div class="nav-icon">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#2A9D8F"/>
-        <path d="M20 7L22.5 16.5L32 19L22.5 21.5L20 31L17.5 21.5L8 19L17.5 16.5Z" fill="white"/>
-        <circle cx="28" cy="10" r="4" fill="#E76F51"/>
-      </svg>
-    </div>
-    Bright <span class="stays">&nbsp;Stays</span>
+    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#2A9D8F"/>
+      <path d="M50,20 L57,41 L78,50 L57,59 L50,80 L43,59 L22,50 L43,41 Z" fill="white"/>
+      <circle cx="73" cy="23" r="13" fill="#E76F51"/>
+    </svg>
+    <span><span class="word-bright">Bright</span> <span class="word-stays">Stays</span></span>
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="problem.html" class="active">The Problem</a>
-    <a href="programs.html">Our Programs</a>
+    <a href="programs.html">Programs</a>
     <a href="involved.html" class="nav-cta">Get Involved</a>
   </div>
 </nav>
 
-<!-- ── Page Hero ─────────────────────────────────────────────── -->
+<!-- ── Page Hero ─────────────────────────────────────────────────── -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="eyebrow">Why This Matters</div>
-    <h1>Children are disappearing from childhood</h1>
-    <p>A long-term hospital stay isn't just a medical experience. For a child, it's weeks or months of lost school, lost friends, and lost normalcy — at exactly the age when those things matter most.</p>
+    <span class="page-eyebrow">The Challenge</span>
+    <h1>A hidden crisis hiding in plain sight.</h1>
+    <p>Millions of children spend weeks or months in hospitals each year. Medicine treats their bodies — but no one is consistently caring for their minds, their development, or their joy.</p>
   </div>
 </div>
 
-<!-- ── Main problem ───────────────────────────────────────────── -->
-<section style="padding:80px 5%;">
-  <div class="problem-grid">
-    <div>
-      <p class="problem-lead">Every year, thousands of children across the US spend weeks or months as inpatients — not for a quick procedure, but for cancer treatment, organ transplants, cardiac surgeries, serious injuries, and rare diseases.</p>
-      <p class="problem-body">These children aren't just fighting illness. They're watching their peers move on without them. They miss class trips and friend groups and birthday parties. They sit in the same room, day after day, with very little to stimulate or comfort them between medical procedures.</p>
-      <p class="problem-body">The psychological and developmental toll of this isolation is real and well-documented. Kids who experience prolonged hospitalization are at higher risk for anxiety, depression, academic regression, and social withdrawal — even after they recover physically.</p>
-      <p class="problem-body">And their families suffer too. Parents are often sleeping at bedsides, navigating insurance and medical decisions, and running on empty — with little left to fill the enrichment gap their children so desperately need.</p>
-
-      <div class="callout">
-        <strong>Hospital Child Life specialists do extraordinary work.</strong>
-        <p>But with dozens of patients per specialist and limited hours in the day, the need for enrichment and human connection far outpaces what hospital staff can provide. That gap is real — and it's where Bright Stays was built to operate.</p>
+<!-- ── The Scope ─────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <span class="label">The Scale</span>
+        <h2 class="section-title reveal">This isn't rare.<br/>It's everywhere.</h2>
+        <p style="color: var(--gray); line-height: 1.75; margin-bottom: 20px;" class="reveal">Every year in the United States, nearly 5.8 million children are hospitalized. Of those, a significant portion — particularly those with cancer, heart conditions, chronic illness, and surgical needs — spend not days but weeks or months in a single inpatient stay.</p>
+        <p style="color: var(--gray); line-height: 1.75;" class="reveal">These long-term stays strip children of their normal routines, friendships, classrooms, and freedoms at the exact ages when those experiences are most formative.</p>
       </div>
-    </div>
-
-    <div>
-      <div class="section-label" style="margin-bottom:20px;">The Hidden Toll</div>
-      <ul class="toll-list">
-        <li>
-          <span class="icon">📖</span>
-          <div class="text">
-            <strong>Falling behind in school</strong>
-            Weeks or months of missed classes create academic gaps that are often irreversible without targeted support. Many kids return to find themselves a full grade level behind their peers.
+      <div class="reveal">
+        <div class="cards-grid-2" style="gap: 16px;">
+          <div class="card card-accent-coral" style="padding: 24px;">
+            <span style="font-size: 2.4rem; font-weight: 900; color: var(--coral); display: block; letter-spacing: -0.04em; line-height: 1;">5.8M</span>
+            <p style="margin-top: 8px; font-size: 0.85rem;">Children hospitalized in the U.S. annually</p>
           </div>
-        </li>
-        <li>
-          <span class="icon">👥</span>
-          <div class="text">
-            <strong>Social isolation & lost friendships</strong>
-            Separation from peers during critical developmental years causes lasting harm. Kids lose their social footing at the exact moment their identity is forming.
+          <div class="card card-accent-top" style="padding: 24px;">
+            <span style="font-size: 2.4rem; font-weight: 900; color: var(--teal); display: block; letter-spacing: -0.04em; line-height: 1;">30+</span>
+            <p style="margin-top: 8px; font-size: 0.85rem;">Days in a single stay for many long-term patients</p>
           </div>
-        </li>
-        <li>
-          <span class="icon">😟</span>
-          <div class="text">
-            <strong>Anxiety, fear & boredom</strong>
-            Long stretches between procedures with nothing to do amplify fear and emotional distress. Distraction and engagement are powerful tools — and they're largely absent.
+          <div class="card card-accent-top" style="padding: 24px;">
+            <span style="font-size: 2.4rem; font-weight: 900; color: var(--teal); display: block; letter-spacing: -0.04em; line-height: 1;">3×</span>
+            <p style="margin-top: 8px; font-size: 0.85rem;">Higher anxiety risk compared to healthy peers</p>
           </div>
-        </li>
-        <li>
-          <span class="icon">👨‍👩‍👧</span>
-          <div class="text">
-            <strong>Overwhelmed families</strong>
-            Parents of long-term patients are emotionally and physically depleted. They cannot fill the enrichment gap alone — and they shouldn't have to.
+          <div class="card card-accent-coral" style="padding: 24px;">
+            <span style="font-size: 2.4rem; font-weight: 900; color: var(--coral); display: block; letter-spacing: -0.04em; line-height: 1;">60%</span>
+            <p style="margin-top: 8px; font-size: 0.85rem;">Report significant academic setback after discharge</p>
           </div>
-        </li>
-        <li>
-          <span class="icon">🏥</span>
-          <div class="text">
-            <strong>Stretched Child Life departments</strong>
-            Hospital Child Life specialists are extraordinary — but they're covering dozens of patients with limited time. The demand for enrichment and companionship far exceeds their capacity.
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── Stats ─────────────────────────────────────────────────── -->
-<div class="stats-bar">
-  <div class="stat">
-    <div class="stat-num">3M+</div>
-    <div class="stat-label">children hospitalized<br>in the US each year</div>
+<!-- ── The Toll ───────────────────────────────────────────────────── -->
+<section class="section" style="background: var(--gray-light);">
+  <div class="section-inner">
+    <div class="text-center mb-40">
+      <span class="label">What's at Stake</span>
+      <h2 class="section-title reveal">The toll on children<br/>goes far deeper than illness.</h2>
+      <p class="section-sub reveal" style="margin: 0 auto;">Extended hospital stays don't just affect physical health. The developmental, emotional, and academic impacts are severe — and largely invisible to the outside world.</p>
+    </div>
+    <div class="cards-grid-2" style="gap: 16px;">
+      <div class="toll-card reveal">
+        <div class="toll-icon">😔</div>
+        <div class="toll-body">
+          <h4>Emotional Isolation</h4>
+          <p>Separated from friends, classmates, and normal social interaction for weeks or months, many hospitalized children experience significant loneliness, depression, and anxiety — conditions that can persist long after discharge.</p>
+        </div>
+      </div>
+      <div class="toll-card reveal reveal-delay-1">
+        <div class="toll-icon">📉</div>
+        <div class="toll-body">
+          <h4>Academic Regression</h4>
+          <p>Missing weeks or months of school causes learning gaps that don't simply disappear when children return home. Without tutoring and academic support during their stay, many children fall behind their peers permanently.</p>
+        </div>
+      </div>
+      <div class="toll-card reveal reveal-delay-2">
+        <div class="toll-icon">🧠</div>
+        <div class="toll-body">
+          <h4>Developmental Disruption</h4>
+          <p>Childhood development depends on play, creativity, exploration, and social bonding. Hospital environments — however necessary — replace all of this with clinical routines, leaving critical developmental windows underutilized.</p>
+        </div>
+      </div>
+      <div class="toll-card reveal reveal-delay-3">
+        <div class="toll-icon">👨‍👩‍👧</div>
+        <div class="toll-body">
+          <h4>Family Stress Amplified</h4>
+          <p>Parents and caregivers are overwhelmed with medical decisions, insurance logistics, and the emotional weight of a sick child. A program that actively engages children provides real relief for entire families.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="stat">
-    <div class="stat-num">Ages 4–17</div>
-    <div class="stat-label">primary population<br>Bright Stays serves</div>
+</section>
+
+<!-- ── What exists today ──────────────────────────────────────────── -->
+<section class="section" style="background: var(--navy);">
+  <div class="section-inner">
+    <div class="text-center mb-40">
+      <span class="label label-white">Today's Landscape</span>
+      <h2 class="section-title text-white reveal">What exists today —<br/>and what's <em style="color: var(--coral); font-style: normal;">missing</em>.</h2>
+      <p class="reveal" style="color: rgba(255,255,255,0.55); font-size: 1.05rem; line-height: 1.75; max-width: 560px; margin: 0 auto;">Other organizations do good work. But none of them address the full picture — and none of them show up consistently, week after week, at the bedside.</p>
+    </div>
+
+    <div class="cards-grid-3" style="gap: 20px; margin-bottom: 40px;">
+      <div class="card-dark reveal">
+        <div class="card-icon-dark">🎮</div>
+        <h3>Child's Play Charity</h3>
+        <p>Donates toys, games, and books to hospital game rooms. One-time donations — no recurring volunteer presence, no academic support, no personalized engagement.</p>
+      </div>
+      <div class="card-dark reveal reveal-delay-1">
+        <div class="card-icon-dark">👗</div>
+        <h3>Ryan's Case for Smiles</h3>
+        <p>Provides hospital gowns with comfort themes. Meaningful comfort object — but doesn't address boredom, isolation, learning loss, or the need for real human connection.</p>
+      </div>
+      <div class="card-dark reveal reveal-delay-2">
+        <div class="card-icon-dark">⭐</div>
+        <h3>Starlight Children's Foundation</h3>
+        <p>Funds entertainment systems and special experiences. Event-based, not recurring. Doesn't include academic programming or sustained volunteer relationships.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="diff-row">
+        <div class="diff-col exists">
+          <h4>What Exists</h4>
+          <div class="diff-item">
+            <span class="x">✗</span>
+            <span class="text">One-time donations and events</span>
+          </div>
+          <div class="diff-item">
+            <span class="x">✗</span>
+            <span class="text">No recurring volunteer presence</span>
+          </div>
+          <div class="diff-item">
+            <span class="x">✗</span>
+            <span class="text">No academic or tutoring support</span>
+          </div>
+          <div class="diff-item">
+            <span class="x">✗</span>
+            <span class="text">No personalized matching to child interests</span>
+          </div>
+          <div class="diff-item">
+            <span class="x">✗</span>
+            <span class="text">Not embedded with hospital care teams</span>
+          </div>
+        </div>
+        <div class="diff-col ours">
+          <h4>Bright Stays</h4>
+          <div class="diff-item">
+            <span class="check">✓</span>
+            <span class="text">Weekly, scheduled volunteer visits</span>
+          </div>
+          <div class="diff-item">
+            <span class="check">✓</span>
+            <span class="text">Consistent, trusted volunteer relationships</span>
+          </div>
+          <div class="diff-item">
+            <span class="check">✓</span>
+            <span class="text">Academic tutoring and reading support</span>
+          </div>
+          <div class="diff-item">
+            <span class="check">✓</span>
+            <span class="text">Activities tailored to each child's profile</span>
+          </div>
+          <div class="diff-item">
+            <span class="check">✓</span>
+            <span class="text">Formally coordinated with pediatric nursing staff</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="stat">
-    <div class="stat-num">Weeks–Months</div>
-    <div class="stat-label">typical long-term<br>inpatient stay length</div>
+</section>
+
+<!-- ── Why now ────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="text-center mb-40">
+      <span class="label">The Opportunity</span>
+      <h2 class="section-title reveal">The moment is right.<br/>The need has never been greater.</h2>
+    </div>
+    <div class="cards-grid-3">
+      <div class="card card-accent-top reveal">
+        <span class="card-icon">🏥</span>
+        <h3>Hospitals Are Ready</h3>
+        <p>Children's hospitals increasingly recognize the importance of whole-child care. Formal volunteer programs with structure and accountability are welcomed — not just tolerated.</p>
+      </div>
+      <div class="card card-accent-top reveal reveal-delay-1">
+        <span class="card-icon">🎓</span>
+        <h3>Student Volunteers Exist</h3>
+        <p>University campuses near major medical centers are full of motivated students who want meaningful service hours — they just need the right structure and training.</p>
+      </div>
+      <div class="card card-accent-top reveal reveal-delay-2">
+        <span class="card-icon">📊</span>
+        <h3>The Research Is Clear</h3>
+        <p>Evidence from child life programs shows that structured enrichment reduces anxiety, improves cooperation with medical staff, and speeds emotional recovery. The model works.</p>
+      </div>
+    </div>
   </div>
-  <div class="stat">
-    <div class="stat-num">0</div>
-    <div class="stat-label">national programs focused on<br>consistent volunteer companionship</div>
+</section>
+
+<!-- ── CTA ────────────────────────────────────────────────────────── -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2>You've seen the problem.<br/>Here's the solution.</h2>
+    <p>Bright Stays is building the program these children need. See how we're doing it — or join us and help make it real.</p>
+    <div class="flex flex-wrap gap-14" style="justify-content: center;">
+      <a href="programs.html" class="btn btn-coral">See Our Programs →</a>
+      <a href="involved.html" class="btn btn-ghost">Get Involved</a>
+    </div>
   </div>
 </div>
 
-<!-- ── What exists section ────────────────────────────────────── -->
-<section style="padding:80px 5%; background:var(--gray-light);">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div class="section-label">The Landscape</div>
-    <h2 class="section-title">What exists — and what's missing</h2>
-    <p style="color:var(--gray); font-size:1rem; line-height:1.75; max-width:680px; margin-bottom:48px;">
-      Several organizations do meaningful work in pediatric hospitals. But every major player focuses on donating things — games, pillowcases, equipment. None of them provide what long-term patients need most: a consistent, trained, caring human presence.
-    </p>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px;">
-      <div class="card" style="border-top-color: var(--gray);">
-        <h3 style="color:var(--gray);">What already exists</h3>
-        <p>Video games and tech equipment (Child's Play Charity). Cheerful pillowcases (Ryan's Case for Smiles). Gaming stations and VR experiences (Starlight Children's Foundation). These are all valuable — but none involve human relationships.</p>
-      </div>
-      <div class="card">
-        <h3>What Bright Stays adds</h3>
-        <p>Trained volunteers who show up consistently. Academic tutoring to prevent kids from falling behind. Creative enrichment activities. Virtual programming for immunocompromised patients. Real human connection — week after week.</p>
-      </div>
-      <div class="card" style="border-top-color: var(--coral);">
-        <h3 style="color:var(--coral);">Why it matters</h3>
-        <p>Research consistently shows that children who feel engaged, connected, and less alone during hospitalization have better emotional outcomes — and often better medical outcomes too. This isn't a luxury. It's a need.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA ────────────────────────────────────────────────────── -->
-<section style="padding:72px 5%; text-align:center; background:var(--white);">
-  <div class="section-label">What We're Doing About It</div>
-  <h2 class="section-title">Bright Stays was built to fill this gap</h2>
-  <p style="color:var(--gray); max-width:560px; margin:0 auto 36px; font-size:1rem; line-height:1.75;">
-    We're currently in our founding phase, building a pilot program in partnership with Boston Children's Hospital. Want to be part of it?
-  </p>
-  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-    <a href="programs.html" class="btn btn-teal">See Our Programs</a>
-    <a href="involved.html" class="btn btn-coral">Get Involved</a>
-  </div>
-</section>
-
+<!-- ── Footer ───────────────────────────────────────────────────── -->
 <footer>
-  <div class="footer-logo">
-    <div class="nav-icon">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#2A9D8F"/>
-        <path d="M20 7L22.5 16.5L32 19L22.5 21.5L20 31L17.5 21.5L8 19L17.5 16.5Z" fill="white"/>
-        <circle cx="28" cy="10" r="4" fill="#E76F51"/>
-      </svg>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Bright Stays</h3>
+      <p>Enriching childhood, one stay at a time. Providing enrichment, companionship, and academic support to pediatric long-term inpatients.</p>
     </div>
-    <span>Bright <span class="stays">Stays</span></span>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="problem.html">The Problem</a>
+      <a href="programs.html">Programs</a>
+      <a href="involved.html">Get Involved</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="programs.html">Creative Enrichment</a>
+      <a href="programs.html">Academic Support</a>
+      <a href="programs.html">Companionship</a>
+      <a href="programs.html">Volunteer Training</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
+      <a href="involved.html">Send a Message</a>
+      <a href="involved.html">Partner With Us</a>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="problem.html">The Problem</a>
-    <a href="programs.html">Programs</a>
-    <a href="involved.html">Get Involved</a>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Bright Stays. All rights reserved.</span>
+    <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
   </div>
-  <div class="footer-copy">© 2026 Bright Stays</div>
 </footer>
 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
