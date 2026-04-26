@@ -4,36 +4,166 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bright Stays — Enriching Childhood, One Stay at a Time</title>
-  <link rel="stylesheet" href="style.css?v=3"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <style>
-    /* Critical inline overrides — ensures layout works even if CDN serves stale CSS */
-    nav { position:fixed;top:0;left:0;right:0;z-index:200;padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;background:transparent; }
-    nav.scrolled { background:rgba(255,255,255,0.96);box-shadow:0 1px 0 rgba(0,0,0,0.06); }
-    .nav-logo { display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.18rem;text-decoration:none; }
-    .nav-logo svg { width:38px!important;height:38px!important;flex-shrink:0; }
-    .nav-links { display:flex;align-items:center;gap:36px; }
-    .nav-links a { font-size:.88rem;font-weight:600;text-decoration:none;color:rgba(255,255,255,.75); }
-    .nav-cta { background:#E76F51!important;color:#fff!important;padding:9px 22px;border-radius:8px; }
-    .hero { min-height:100vh;background:#0A1628;display:flex;align-items:center;padding:120px 6% 80px;position:relative;overflow:hidden; }
-    .hero-inner { max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center; }
-    .hero h1 { font-size:clamp(2.8rem,5.5vw,4.4rem);font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.03em;margin-bottom:24px; }
-    .hero h1 em { font-style:normal;color:#E76F51; }
-    .hero-sub { font-size:1.1rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:520px;margin-bottom:44px; }
-    .hero-btns { display:flex;gap:14px;flex-wrap:wrap; }
-    .hero-tag { display:inline-flex;align-items:center;gap:8px;background:rgba(42,157,143,.18);border:1px solid rgba(42,157,143,.3);color:#7DD8D1;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:28px; }
-    .hero-visual { display:flex;align-items:center;justify-content:center; }
-    .hero-icon-wrap { position:relative;width:340px;height:340px; }
-    .hero-icon-main { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:160px!important;height:160px!important; }
-    .word-bright { color:#fff; }
-    .word-stays { color:#2A9D8F; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0A1628;--navy-mid:#132035;--teal:#2A9D8F;--teal-dark:#1f7a6e;--teal-light:#E8F7F5;--coral:#E76F51;--coral-dark:#c95e3f;--coral-light:#FEF0EB;--dark:#111827;--gray:#6B7280;--gray-light:#F8F9FB;--border:#E5E7EB;--white:#FFFFFF;--font:'Inter',-apple-system,sans-serif;--radius:14px;--radius-lg:20px;--shadow-sm:0 2px 8px rgba(0,0,0,.06);--shadow:0 8px 32px rgba(0,0,0,.10);--shadow-lg:0 20px 60px rgba(0,0,0,.15)}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--dark);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;transition:background .35s,box-shadow .35s}
+nav.transparent{background:transparent}
+nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.18rem;letter-spacing:-.02em}
+.nav-logo svg{width:38px;height:38px;flex-shrink:0}
+.word-bright{color:var(--white)}
+.word-stays{color:#7DD8D1}
+nav.scrolled .word-bright{color:var(--dark)}
+nav.scrolled .word-stays{color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:.88rem;font-weight:600;color:rgba(255,255,255,.75);transition:color .2s}
+nav.scrolled .nav-links a{color:var(--gray)}
+.nav-links a:hover{color:var(--white)}
+nav.scrolled .nav-links a:hover{color:var(--teal)}
+.nav-cta{background:var(--coral)!important;color:var(--white)!important;padding:9px 22px;border-radius:8px;font-weight:700!important}
+.nav-cta:hover{background:var(--coral-dark)!important}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 32px;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s;border:none;letter-spacing:.01em;font-family:var(--font)}
+.btn-coral{background:var(--coral);color:var(--white)}
+.btn-coral:hover{background:var(--coral-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(231,111,81,.35)}
+.btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
+.btn-teal{background:var(--teal);color:var(--white)}
+.btn-teal:hover{background:var(--teal-dark);transform:translateY(-2px)}
+.btn-outline-teal{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+.btn-outline-teal:hover{background:var(--teal);color:var(--white)}
+.btn-white{background:var(--white);color:var(--navy)}
+.btn-white:hover{background:#f0f0f0;transform:translateY(-2px)}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 6% 80px}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none}
+.hero-orb-1{width:700px;height:700px;background:radial-gradient(circle,rgba(42,157,143,.18) 0%,transparent 70%);top:-200px;right:-150px}
+.hero-orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(231,111,81,.10) 0%,transparent 70%);bottom:-150px;left:-100px}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(42,157,143,.18);border:1px solid rgba(42,157,143,.3);color:#7DD8D1;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:28px}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#7DD8D1}
+.hero h1{font-size:clamp(2.8rem,5.5vw,4.4rem);font-weight:900;color:var(--white);line-height:1.08;letter-spacing:-.03em;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--coral)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:520px;margin-bottom:44px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{display:flex;align-items:center;justify-content:center}
+.hero-icon-wrap{position:relative;width:340px;height:340px}
+.ring{position:absolute;border-radius:50%;border:1px solid;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin-slow linear infinite}
+.ring-1{width:340px;height:340px;border-color:rgba(42,157,143,.15);animation-duration:30s}
+.ring-2{width:280px;height:280px;border-color:rgba(42,157,143,.20);animation-duration:22s;animation-direction:reverse}
+.ring-3{width:220px;height:220px;border-color:rgba(42,157,143,.25);animation-duration:16s}
+@keyframes spin-slow{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hero-icon-main{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:160px;height:160px;filter:drop-shadow(0 0 40px rgba(42,157,143,.4));animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-12px)}}
+.orbit-dot{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--coral);top:50%;left:50%;animation:orbit linear infinite}
+.orbit-dot-1{animation-duration:8s}
+.orbit-dot-2{width:8px;height:8px;background:var(--teal);animation-duration:12s;animation-direction:reverse}
+.orbit-dot-3{width:6px;height:6px;background:#7DD8D1;animation-duration:6s}
+@keyframes orbit{from{transform:rotate(0deg) translateX(140px) rotate(0deg)}to{transform:rotate(360deg) translateX(140px) rotate(-360deg)}}
+
+/* STATS */
+.stats-section{background:var(--navy);padding:72px 6%}
+.stats-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{text-align:center;padding:32px 24px;border-right:1px solid rgba(255,255,255,.08)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:3rem;font-weight:900;color:var(--teal);letter-spacing:-.04em;line-height:1;display:block;margin-bottom:8px}
+.stat-label{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.5}
+
+/* MISSION */
+.mission-section{background:var(--teal);padding:80px 6%;text-align:center}
+.mission-quote{max-width:880px;margin:0 auto;font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:700;color:var(--white);line-height:1.5;letter-spacing:-.01em}
+.mission-quote em{font-style:normal;color:rgba(255,255,255,.75)}
+
+/* SECTIONS */
+.section{padding:100px 6%}
+.section-inner{max-width:1200px;margin:0 auto}
+.label{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;padding:5px 14px;background:var(--teal-light);border-radius:100px}
+.label-white{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8)}
+h2.section-title{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin-bottom:18px}
+.section-sub{font-size:1.05rem;color:var(--gray);line-height:1.75;max-width:560px}
+.text-center{text-align:center}
+.text-white{color:var(--white)}
+.mb-40{margin-bottom:40px}
+.mt-40{margin-top:40px}
+.mt-24{margin-top:24px}
+.mt-16{margin-top:16px}
+.mb-16{margin-bottom:16px}
+.flex{display:flex}
+.flex-wrap{flex-wrap:wrap}
+.gap-14{gap:14px}
+
+/* CARDS */
+.cards-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cards-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(max-width:900px){.cards-grid-3{grid-template-columns:1fr}}
+@media(max-width:700px){.cards-grid-2{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card-accent-top{border-top:3px solid var(--teal)}
+.card-accent-coral{border-top:3px solid var(--coral)}
+.card-icon{font-size:2.2rem;margin-bottom:18px;display:block}
+.card h3{font-size:1.05rem;font-weight:800;color:var(--dark);margin-bottom:10px;letter-spacing:-.01em}
+.card p{font-size:.92rem;color:var(--gray);line-height:1.7}
+
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:48px}}
+
+/* CALLOUT */
+.callout{background:linear-gradient(135deg,var(--navy) 0%,#132035 100%);border:1px solid rgba(42,157,143,.2);border-radius:var(--radius-lg);padding:36px 40px;position:relative;overflow:hidden}
+.callout::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(42,157,143,.15) 0%,transparent 70%);top:-60px;right:-60px}
+.callout h4{font-size:1rem;font-weight:800;color:var(--white);margin-bottom:10px}
+.callout p{font-size:.92rem;color:rgba(255,255,255,.6);line-height:1.7}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+
+/* CTA */
+.cta-section{background:var(--navy);padding:100px 6%;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(42,157,143,.15) 0%,transparent 60%)}
+.cta-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
+.cta-section h2{font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--white);letter-spacing:-.03em;margin-bottom:16px}
+.cta-section p{font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:40px}
+
+/* FOOTER */
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:48px 6% 32px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;gap:32px}}
+.footer-brand h3{font-size:1.1rem;font-weight:800;color:var(--white);margin-bottom:10px}
+.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.45);line-height:1.7;max-width:240px}
+.footer-col h4{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:16px}
+.footer-col a{display:block;font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.3)}
+.footer-email{font-size:.85rem;color:var(--teal);font-weight:600}
+.footer-email:hover{color:#7DD8D1}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px}
   </style>
 </head>
 <body>
 
-<!-- ── Navigation ──────────────────────────────────────────────── -->
 <nav class="transparent" id="nav">
   <a href="index.html" class="nav-logo">
-    <svg class="logo-mark" width="38" height="38" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <svg width="38" height="38" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <circle cx="50" cy="50" r="48" fill="#2A9D8F"/>
       <path d="M50,20 L57,41 L78,50 L57,59 L50,80 L43,59 L22,50 L43,41 Z" fill="white"/>
       <circle cx="73" cy="23" r="13" fill="#E76F51"/>
@@ -41,19 +171,17 @@
     <span><span class="word-bright">Bright</span> <span class="word-stays">Stays</span></span>
   </a>
   <div class="nav-links">
-    <a href="index.html" class="active">Home</a>
+    <a href="index.html">Home</a>
     <a href="problem.html">The Problem</a>
     <a href="programs.html">Programs</a>
     <a href="involved.html" class="nav-cta">Get Involved</a>
   </div>
 </nav>
 
-<!-- ── Hero ────────────────────────────────────────────────────── -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
-  <div class="hero-orb hero-orb-3"></div>
-
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-tag">Pediatric Hospital Enrichment</div>
@@ -64,7 +192,6 @@
         <a href="problem.html" class="btn btn-ghost">See the Need</a>
       </div>
     </div>
-
     <div class="hero-visual">
       <div class="hero-icon-wrap">
         <div class="ring ring-1"></div>
@@ -83,98 +210,57 @@
   </div>
 </section>
 
-<!-- ── Stats ────────────────────────────────────────────────────── -->
+<!-- STATS -->
 <div class="stats-section">
   <div class="stats-grid">
-    <div class="stat-item reveal">
-      <span class="stat-num">5.8M</span>
-      <span class="stat-label">Children hospitalized<br/>in the U.S. each year</span>
-    </div>
-    <div class="stat-item reveal reveal-delay-1">
-      <span class="stat-num">30+</span>
-      <span class="stat-label">Days some children<br/>spend in a single stay</span>
-    </div>
-    <div class="stat-item reveal reveal-delay-2">
-      <span class="stat-num">3×</span>
-      <span class="stat-label">Higher risk of anxiety<br/>in long-term patients</span>
-    </div>
-    <div class="stat-item reveal reveal-delay-3">
-      <span class="stat-num">0</span>
-      <span class="stat-label">Consistent enrichment<br/>programs at most hospitals</span>
-    </div>
+    <div class="stat-item reveal"><span class="stat-num">5.8M</span><span class="stat-label">Children hospitalized in the U.S. each year</span></div>
+    <div class="stat-item reveal reveal-delay-1"><span class="stat-num">30+</span><span class="stat-label">Days some children spend in a single stay</span></div>
+    <div class="stat-item reveal reveal-delay-2"><span class="stat-num">3×</span><span class="stat-label">Higher risk of anxiety in long-term patients</span></div>
+    <div class="stat-item reveal reveal-delay-3"><span class="stat-num">0</span><span class="stat-label">Consistent enrichment programs at most hospitals</span></div>
   </div>
 </div>
 
-<!-- ── Mission quote ─────────────────────────────────────────────── -->
+<!-- MISSION -->
 <div class="mission-section">
-  <p class="mission-quote reveal">
-    <em>"A hospital stay shouldn't mean a childhood lost."</em><br/>
-    <strong>Bright Stays exists to make sure it doesn't.</strong>
-  </p>
+  <p class="mission-quote reveal"><em>"A hospital stay shouldn't mean a childhood lost."</em><br/><strong>Bright Stays exists to make sure it doesn't.</strong></p>
 </div>
 
-<!-- ── What we do ─────────────────────────────────────────────────── -->
-<section class="section" style="background: var(--gray-light);">
+<!-- WHAT WE DO -->
+<section class="section" style="background:var(--gray-light)">
   <div class="section-inner">
     <div class="text-center mb-40">
       <span class="label">What We Do</span>
       <h2 class="section-title reveal">Three pillars.<br/>One mission.</h2>
-      <p class="section-sub reveal" style="margin: 0 auto;">Every Bright Stays program is designed around what hospitalized children actually need — connection, learning, and joy.</p>
+      <p class="section-sub reveal" style="margin:0 auto">Every Bright Stays program is designed around what hospitalized children actually need — connection, learning, and joy.</p>
     </div>
     <div class="cards-grid-3">
-      <div class="card card-accent-top reveal">
-        <span class="card-icon">🎨</span>
-        <h3>Creative Enrichment</h3>
-        <p>Art, music, storytelling, and play — delivered bedside by trained volunteers. Because creativity heals as much as medicine.</p>
-      </div>
-      <div class="card card-accent-top reveal reveal-delay-1">
-        <span class="card-icon">📚</span>
-        <h3>Academic Continuity</h3>
-        <p>Tutoring, reading, and schoolwork support so children don't fall behind and return home with their confidence intact.</p>
-      </div>
-      <div class="card card-accent-top reveal reveal-delay-2">
-        <span class="card-icon">🤝</span>
-        <h3>Genuine Companionship</h3>
-        <p>Consistent, friendly faces — not just one-time visitors. Relationships that make long stays feel less isolating, week after week.</p>
-      </div>
+      <div class="card card-accent-top reveal"><span class="card-icon">🎨</span><h3>Creative Enrichment</h3><p>Art, music, storytelling, and play — delivered bedside by trained volunteers. Because creativity heals as much as medicine.</p></div>
+      <div class="card card-accent-top reveal reveal-delay-1"><span class="card-icon">📚</span><h3>Academic Continuity</h3><p>Tutoring, reading, and schoolwork support so children don't fall behind and return home with their confidence intact.</p></div>
+      <div class="card card-accent-top reveal reveal-delay-2"><span class="card-icon">🤝</span><h3>Genuine Companionship</h3><p>Consistent, friendly faces — not just one-time visitors. Relationships that make long stays feel less isolating, week after week.</p></div>
     </div>
-    <div class="text-center mt-40">
-      <a href="programs.html" class="btn btn-teal">Explore All Programs →</a>
-    </div>
+    <div class="text-center mt-40"><a href="programs.html" class="btn btn-teal">Explore All Programs →</a></div>
   </div>
 </section>
 
-<!-- ── Why it matters ──────────────────────────────────────────── -->
-<section class="section" style="background: var(--navy);">
+<!-- WHY IT MATTERS -->
+<section class="section" style="background:var(--navy)">
   <div class="section-inner">
     <div class="split">
       <div>
         <span class="label label-white">The Gap</span>
-        <h2 class="section-title text-white reveal" style="margin-bottom: 20px;">Most hospitals treat the body.<br/>Few nurture the <em style="color: var(--coral); font-style: normal;">whole child</em>.</h2>
-        <p style="color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 32px;" class="reveal">Long-term pediatric patients face emotional isolation, developmental regression, and academic setbacks that medicine alone can't fix. Today, there's no organization providing <em>consistent</em>, <em>recurring</em> enrichment at the bedside — across all three dimensions at once.</p>
+        <h2 class="section-title text-white reveal" style="margin-bottom:20px">Most hospitals treat the body.<br/>Few nurture the <em style="color:var(--coral);font-style:normal">whole child</em>.</h2>
+        <p style="color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:32px" class="reveal">Long-term pediatric patients face emotional isolation, developmental regression, and academic setbacks that medicine alone can't fix. There is no organization providing <em>consistent</em>, <em>recurring</em> enrichment at the bedside across all three dimensions at once.</p>
         <a href="problem.html" class="btn btn-outline-teal reveal">Read the Full Problem →</a>
       </div>
       <div class="reveal">
         <div class="callout">
           <h4>The Bright Stays Difference</h4>
-          <p style="margin-bottom: 20px;">We don't show up once. We come back, week after week, building real relationships with the children and families who need us most.</p>
-          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
-            <div style="display: flex; gap: 12px; align-items: flex-start;">
-              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
-              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Recurring, scheduled visits — not one-time events</span>
-            </div>
-            <div style="display: flex; gap: 12px; align-items: flex-start;">
-              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
-              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Trained volunteers matched to each child's interests</span>
-            </div>
-            <div style="display: flex; gap: 12px; align-items: flex-start;">
-              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
-              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Creative + academic + emotional support in one program</span>
-            </div>
-            <div style="display: flex; gap: 12px; align-items: flex-start;">
-              <span style="color: var(--teal); font-weight: 800; margin-top: 2px;">✓</span>
-              <span style="color: rgba(255,255,255,0.7); font-size: 0.92rem;">Hospital-embedded, fully coordinated with care teams</span>
-            </div>
+          <p style="margin-bottom:20px">We don't show up once. We come back, week after week, building real relationships with the children and families who need us most.</p>
+          <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--teal);font-weight:800;margin-top:2px">✓</span><span style="color:rgba(255,255,255,.7);font-size:.92rem">Recurring, scheduled visits — not one-time events</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--teal);font-weight:800;margin-top:2px">✓</span><span style="color:rgba(255,255,255,.7);font-size:.92rem">Trained volunteers matched to each child's interests</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--teal);font-weight:800;margin-top:2px">✓</span><span style="color:rgba(255,255,255,.7);font-size:.92rem">Creative + academic + emotional support in one program</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--teal);font-weight:800;margin-top:2px">✓</span><span style="color:rgba(255,255,255,.7);font-size:.92rem">Hospital-embedded, fully coordinated with care teams</span></div>
           </div>
         </div>
       </div>
@@ -182,106 +268,59 @@
   </div>
 </section>
 
-<!-- ── Who we serve ─────────────────────────────────────────────── -->
+<!-- WHO WE SERVE -->
 <section class="section">
   <div class="section-inner">
     <div class="text-center mb-40">
       <span class="label">Our Reach</span>
       <h2 class="section-title reveal">Starting in Boston.<br/>Growing to New York.</h2>
-      <p class="section-sub reveal" style="margin: 0 auto;">Bright Stays is piloting at Boston Children's Hospital, with Summer 2025 expansion into NYU Langone, Columbia, and NewYork-Presbyterian.</p>
+      <p class="section-sub reveal" style="margin:0 auto">Bright Stays is piloting at Boston Children's Hospital, with Summer 2025 expansion into NYU Langone, Columbia, and NewYork-Presbyterian.</p>
     </div>
     <div class="cards-grid-2">
       <div class="card card-accent-coral reveal">
-        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
-          <span style="font-size: 2rem;">🏥</span>
-          <div>
-            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral); margin-bottom: 4px;">Pilot Site</div>
-            <h3 style="margin: 0;">Boston Children's Hospital</h3>
-          </div>
-        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px"><span style="font-size:2rem">🏥</span><div><div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin-bottom:4px">Pilot Site</div><h3 style="margin:0">Boston Children's Hospital</h3></div></div>
         <p>The #1 ranked children's hospital in the U.S. Our pilot program will serve long-term inpatient children across oncology, cardiology, and chronic care wards.</p>
       </div>
       <div class="card card-accent-top reveal reveal-delay-1">
-        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
-          <span style="font-size: 2rem;">🌆</span>
-          <div>
-            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px;">Summer Expansion</div>
-            <h3 style="margin: 0;">New York City</h3>
-          </div>
-        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px"><span style="font-size:2rem">🌆</span><div><div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Summer Expansion</div><h3 style="margin:0">New York City</h3></div></div>
         <p>Scaling to NYU Langone, Columbia University Medical Center, and NewYork-Presbyterian — bringing Bright Stays to thousands more children and families.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── Get involved CTA ─────────────────────────────────────────── -->
+<!-- CTA -->
 <div class="cta-section">
   <div class="cta-inner">
-    <span class="label label-white mb-16" style="display: inline-block;">Join Us</span>
+    <span class="label label-white mb-16" style="display:inline-block">Join Us</span>
     <h2>Ready to make a difference?</h2>
     <p>Whether you're a volunteer, a hospital administrator, a student organization, or a donor — there's a role for you at Bright Stays.</p>
-    <div class="flex flex-wrap gap-14" style="justify-content: center;">
+    <div class="flex flex-wrap gap-14" style="justify-content:center">
       <a href="involved.html" class="btn btn-coral">Get Involved Today</a>
       <a href="programs.html" class="btn btn-ghost">Our Programs</a>
     </div>
   </div>
 </div>
 
-<!-- ── Footer ───────────────────────────────────────────────────── -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-top">
-    <div class="footer-brand">
-      <h3>Bright Stays</h3>
-      <p>Enriching childhood, one stay at a time. Providing enrichment, companionship, and academic support to pediatric long-term inpatients.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Navigate</h4>
-      <a href="index.html">Home</a>
-      <a href="problem.html">The Problem</a>
-      <a href="programs.html">Programs</a>
-      <a href="involved.html">Get Involved</a>
-    </div>
-    <div class="footer-col">
-      <h4>Programs</h4>
-      <a href="programs.html">Creative Enrichment</a>
-      <a href="programs.html">Academic Support</a>
-      <a href="programs.html">Companionship</a>
-      <a href="programs.html">Volunteer Training</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
-      <a href="involved.html">Send a Message</a>
-      <a href="involved.html">Partner With Us</a>
-    </div>
+    <div class="footer-brand"><h3>Bright Stays</h3><p>Enriching childhood, one stay at a time. Providing enrichment, companionship, and academic support to pediatric long-term inpatients.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><a href="index.html">Home</a><a href="problem.html">The Problem</a><a href="programs.html">Programs</a><a href="involved.html">Get Involved</a></div>
+    <div class="footer-col"><h4>Programs</h4><a href="programs.html">Creative Enrichment</a><a href="programs.html">Academic Support</a><a href="programs.html">Companionship</a><a href="programs.html">Volunteer Training</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a><a href="involved.html">Send a Message</a><a href="involved.html">Partner With Us</a></div>
   </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2025 Bright Stays. All rights reserved.</span>
-    <a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a>
-  </div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Bright Stays. All rights reserved.</span><a href="mailto:gabriella@brightstaysorg.com" class="footer-email">gabriella@brightstaysorg.com</a></div>
 </footer>
 
 <script>
-  // Nav transparency on scroll
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      nav.classList.remove('transparent');
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-      nav.classList.add('transparent');
-    }
-  });
-
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>60){nav.classList.remove('transparent');nav.classList.add('scrolled')}
+  else{nav.classList.remove('scrolled');nav.classList.add('transparent')}
+});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
